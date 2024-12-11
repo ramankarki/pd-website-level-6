@@ -86,6 +86,7 @@ export default function ContactUs() {
 				method='POST'
 				data-netlify={true}
 				onSubmit={onSubmit}
+				netlify
 			>
 				<input type='hidden' name='form-name' value={netlifyForm} />
 				<label>
