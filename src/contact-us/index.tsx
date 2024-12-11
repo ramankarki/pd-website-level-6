@@ -43,7 +43,8 @@ export default function ContactUs() {
 				message: form.message,
 			}).toString(),
 		})
-			.then(() => {
+			.then((data) => {
+				console.log(data)
 				setForm({
 					name: '',
 					email: '',
@@ -52,7 +53,10 @@ export default function ContactUs() {
 					formState: 'submitted',
 				})
 			})
-			.catch(() => setForm((prev) => ({ ...prev, formState: 'failed' })))
+			.catch((err) => {
+				console.log(err)
+				setForm((prev) => ({ ...prev, formState: 'failed' }))
+			})
 	}
 
 	const onInputChange = (
