@@ -37,6 +37,7 @@ export default function ContactUs() {
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: new URLSearchParams({
 				'form-name': netlifyForm,
+				'bot-field': '',
 				name: form.name,
 				email: form.email,
 				subject: form.subject,
@@ -87,6 +88,7 @@ export default function ContactUs() {
 				name={netlifyForm}
 				method='POST'
 				data-netlify={true}
+				netlify-honeypot='bot-field'
 				onSubmit={onSubmit}
 			>
 				<input type='hidden' name='form-name' value={netlifyForm} />
