@@ -23,15 +23,6 @@ export default function ContactUs() {
 		formState: 'typing',
 	})
 
-	const encode = (data: Record<string, string>) => {
-		return Object.keys(data)
-			.map(
-				(key: string) =>
-					encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-			)
-			.join('&')
-	}
-
 	const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault()
 
@@ -44,13 +35,13 @@ export default function ContactUs() {
 		await fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encode({
+			body: new URLSearchParams({
 				'form-name': netlifyForm,
 				name: form.name,
 				email: form.email,
 				subject: form.subject,
 				message: form.message,
-			}),
+			}).toString(),
 		})
 			.then(() => {
 				setForm({
