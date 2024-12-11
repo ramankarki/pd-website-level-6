@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+
+		<!-- A little help for the Netlify post-processing bots -->
+		<form
+			name="PD contact form"
+			netlify
+			netlify-honeypot="bot-field"
+			action="/"
+			hidden
+		>
+			<label>
+				<p>Name</p>
+				<input type="text" name="name" required />
+			</label>
+			<label>
+				<p>Email</p>
+				<input type="email" name="email" required />
+			</label>
+			<label>
+				<p>Subject</p>
+				<input type="text" name="subject" required />
+			</label>
+			<label>
+				<p>Message</p>
+				<textarea name="message" id="" cols="30" rows="4" required></textarea>
+			</label>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>
