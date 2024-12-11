@@ -2,20 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+	color: var(--foreground);
+	background: var(--background);
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+input,
+textarea,
+form,
+button {
+	display: block;
+	width: 100%;
+}
+
+input,
+textarea {
+	background-color: #eeeeee;
+	border-radius: 1rem;
+	padding: 0.5rem 1rem;
+}
+
+form {
+	max-width: 600px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-top: 20px;
+}
+
+form label {
+	font-size: 14px;
+}
+
+label p {
+	margin-bottom: 8px;
+}
+
+.submit {
+	background-color: #1e3149;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 1rem;
+}
+
+.form-success,
+.form-failed {
+	position: fixed;
+	top: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	color: white;
+}
+
+.form-success {
+	background-color: rgb(85, 184, 85);
+}
+
+.form-failed {
+	background-color: rgb(228, 103, 103);
 }

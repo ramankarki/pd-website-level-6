@@ -1,101 +1,176 @@
-import Image from "next/image";
+import ContactUs from '@/contact-us'
+import Image from 'next/image'
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+	return (
+		<div className='pt-5 pb-10 px-4 lg:px-20'>
+			{/* header */}
+			<div className='flex items-center sticky top-0 bg-white py-5'>
+				<div className='font-bold text-xl text-[#2A4768]'>AI Solutions</div>
+				<div className='ml-auto flex items-center gap-4 text-[#1E3149] text-sm font-medium'>
+					<a className='hover:opacity-50' href='#banner'>
+						Home
+					</a>
+					<a className='hover:opacity-50' href='#services'>
+						Services
+					</a>
+					<a className='hover:opacity-50' href='#events'>
+						Events
+					</a>
+					<a className='hover:opacity-50' href='#gallery'>
+						Gallery
+					</a>
+					<a className='hover:opacity-50' href='#contact-us'>
+						Contact us
+					</a>
+				</div>
+			</div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+			{/* banner */}
+			<Image
+				id='banner'
+				className='w-full mt-10'
+				src='/images/banner.jpg'
+				alt='banner'
+				width={1120}
+				height={644}
+				priority
+			/>
+
+			{/* services */}
+			<div id='services'>
+				<div className='font-bold text-xl text-center mt-20'>Services</div>
+				<div className='mt-3 text-center text-sm'>
+					Empowering businesses with innovative AI tools
+				</div>
+				<div className='flex gap-5 mt-10 [&_*]:w-full text-center [&_p]:mt-4 [&_p]:text-sm'>
+					<div>
+						<Image
+							src='/images/service-1.jpg'
+							alt='service 1'
+							width={300}
+							height={300}
+							className=''
+						/>
+						<p>Fast thinking</p>
+					</div>
+					<div>
+						<Image
+							src='/images/service-2.jpg'
+							alt='service 2'
+							width={300}
+							height={300}
+						/>
+						<p>Better decision making</p>
+					</div>
+					<div>
+						<Image
+							src='/images/service-3.jpg'
+							alt='service 3'
+							width={300}
+							height={300}
+						/>
+						<p>Better results</p>
+					</div>
+				</div>
+			</div>
+
+			{/* upcoming events */}
+			<div id='events'>
+				<p className='text-xl text-center mt-20 font-bold'>Upcoming events</p>
+				<div className='mt-10 flex items-center [&_div]:w-full [&_div]:flex [&_div]:flex-col [&_div]:items-center [&_div]:gap-2 [&_p]:text-sm [&_p+p]:text-xs'>
+					<div>
+						<Image
+							src='/images/event-1.png'
+							alt='upcoming 1'
+							width={100}
+							height={100}
+						/>
+						<p>Design submit</p>
+						<p>Jan 15, 2022</p>
+					</div>
+					<div>
+						<Image
+							src='/images/event-2.png'
+							alt='upcoming 1'
+							width={100}
+							height={100}
+						/>
+						<p>Design submit</p>
+						<p>Jan 15, 2022</p>
+					</div>
+					<div>
+						<Image
+							src='/images/event-3.png'
+							alt='upcoming 1'
+							width={100}
+							height={100}
+						/>
+						<p>Design submit</p>
+						<p>Jan 15, 2022</p>
+					</div>
+				</div>
+			</div>
+
+			{/* gallery */}
+			<div id='gallery'>
+				<p className='text-xl text-center mt-20 font-bold'>Gallery</p>
+				<Image
+					src='/images/gallery-1.png'
+					alt='gallery 1'
+					width={1280}
+					height={526}
+					className='w-full h-auto mt-10'
+				/>
+				<Image
+					src='/images/gallery-2.png'
+					alt='gallery 2'
+					width={1280}
+					height={526}
+					className='w-full h-auto mt-4'
+				/>
+			</div>
+
+			{/* customer feedback */}
+			<div id='feedback'>
+				<p className='text-xl text-center mt-20 font-bold'>Customer feedback</p>
+				<div className='mt-10 flex flex-col items-center gap-3'>
+					<Image
+						src='/images/avatar.png'
+						alt='avatar'
+						width={100}
+						height={100}
+					/>
+					<p className='font-semibold text-sm'>
+						Blake Weston, Find Fill Storage
+					</p>
+					<div className='flex items-center gap-5'>
+						<Image src='/images/star.svg' alt='star' width={32} height={32} />
+						<Image src='/images/star.svg' alt='star' width={32} height={32} />
+						<Image src='/images/star.svg' alt='star' width={32} height={32} />
+						<Image src='/images/star.svg' alt='star' width={32} height={32} />
+						<Image src='/images/star.svg' alt='star' width={32} height={32} />
+					</div>
+					<p className='max-w-[516px] text-center'>
+						AI solutions do high-quality work in the allotted timeframe. They
+						maintain clear and consistent communication, providing updates on
+						key project components and listening to feedback. There are numerous
+						different stages, processes, and statuses in our project which made
+						the work very complicated, but AI solutions worked it all out.
+					</p>
+				</div>
+			</div>
+
+			{/* contact us */}
+			<div id='contact-us'>
+				<ContactUs />
+			</div>
+
+			<div className='mt-20 flex items-center justify-between'>
+				<p>© 2024 AI Solution. All Rights Reserved.</p>
+				<p>Privacy policy</p>
+				<p>Terms of use</p>
+			</div>
+		</div>
+	)
 }
