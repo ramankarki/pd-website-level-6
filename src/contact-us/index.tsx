@@ -12,7 +12,7 @@ type Form = {
 	formState: 'typing' | 'submitting' | 'submitted' | 'failed' | 'exit modal'
 }
 
-const netlifyForm = 'PD contact form'
+const netlifyForm = 'contact'
 
 export default function ContactUs() {
 	const [form, setForm] = useState<Form>({
