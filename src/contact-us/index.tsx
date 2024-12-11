@@ -44,7 +44,13 @@ export default function ContactUs() {
 		await fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encode({ 'form-name': netlifyForm, ...form }),
+			body: encode({
+				'form-name': netlifyForm,
+				name: form.name,
+				email: form.email,
+				subject: form.subject,
+				message: form.message,
+			}),
 		})
 			.then(() => {
 				setForm({
