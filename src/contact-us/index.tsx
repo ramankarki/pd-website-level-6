@@ -43,6 +43,7 @@ export default function ContactUs() {
 				message: form.message,
 			}).toString(),
 		})
+			.then((data) => data.json())
 			.then((data) => {
 				console.log(data)
 				setForm({
