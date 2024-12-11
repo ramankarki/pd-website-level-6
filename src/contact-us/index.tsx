@@ -32,7 +32,7 @@ export default function ContactUs() {
 
 		setForm((prev) => ({ ...prev, formState: 'submitting' }))
 
-		await fetch('/', {
+		await fetch('/form', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: new URLSearchParams({
@@ -84,14 +84,7 @@ export default function ContactUs() {
 				</p>
 			</div>
 
-			<form
-				name={netlifyForm}
-				method='POST'
-				data-netlify={true}
-				netlify-honeypot='bot-field'
-				onSubmit={onSubmit}
-			>
-				<input type='hidden' name='form-name' value={netlifyForm} />
+			<form onSubmit={onSubmit}>
 				<label>
 					<p>Name</p>
 					<input
