@@ -7,6 +7,11 @@ import Image from 'next/image'
 type Form = {
 	name: string
 	email: string
+	phone: string
+	companyName: string
+	jobTitle: string
+	jobDetails: string
+	country: string
 	subject: string
 	message: string
 	formState: 'typing' | 'submitting' | 'submitted' | 'failed' | 'exit modal'
@@ -18,6 +23,11 @@ export default function ContactUs() {
 	const [form, setForm] = useState<Form>({
 		name: '',
 		email: '',
+		phone: '',
+		companyName: '',
+		jobTitle: '',
+		jobDetails: '',
+		country: '',
 		subject: '',
 		message: '',
 		formState: 'typing',
@@ -49,6 +59,11 @@ export default function ContactUs() {
 				setForm({
 					name: '',
 					email: '',
+					companyName: '',
+					country: '',
+					jobDetails: '',
+					jobTitle: '',
+					phone: '',
 					subject: '',
 					message: '',
 					formState: 'submitted',
@@ -101,6 +116,56 @@ export default function ContactUs() {
 						name='email'
 						onChange={onInputChange}
 						value={form.email}
+						required
+					/>
+				</label>
+				<label>
+					<p>Phone</p>
+					<input
+						type='text'
+						name='phone'
+						onChange={onInputChange}
+						value={form.phone}
+						required
+					/>
+				</label>
+				<label>
+					<p>Company name</p>
+					<input
+						type='text'
+						name='companyName'
+						onChange={onInputChange}
+						value={form.companyName}
+						required
+					/>
+				</label>
+				<label>
+					<p>Job title</p>
+					<input
+						type='text'
+						name='jobTitle'
+						onChange={onInputChange}
+						value={form.jobTitle}
+						required
+					/>
+				</label>
+				<label>
+					<p>Job details</p>
+					<input
+						type='text'
+						name='jobDetails'
+						onChange={onInputChange}
+						value={form.jobDetails}
+						required
+					/>
+				</label>
+				<label>
+					<p>Country</p>
+					<input
+						type='text'
+						name='country'
+						onChange={onInputChange}
+						value={form.country}
 						required
 					/>
 				</label>
