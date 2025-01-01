@@ -54,6 +54,11 @@ export default function ContactUs() {
 				email: form.email,
 				subject: form.subject,
 				message: form.message,
+				companyName: form.companyName,
+				country: form.country,
+				jobDetails: form.jobDetails,
+				jobTitle: form.jobTitle,
+				phone: form.phone,
 			}).toString(),
 		})
 			.then((data) => {
