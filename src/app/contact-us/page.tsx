@@ -101,7 +101,7 @@ export default function ContactUs() {
 			<HeaderComponent />
 
 			<div className=''>
-				<h2 className='font-bold text-xl text-center mt-20'>Contact me</h2>
+				<h2 className='font-bold text-xl text-center mt-20'>Contact us</h2>
 				<p className='text-center text-sm mt-4'>
 					Get in touch with us for inquiries or collaborations
 				</p>
