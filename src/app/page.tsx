@@ -1,176 +1,467 @@
-import ContactUs from '@/contact-us'
+import FooterComponent from '@/components/footer'
+import HeaderComponent from '@/components/header'
 import Image from 'next/image'
 
 export default function Home() {
 	return (
-		<div className='pt-5 pb-10 px-4 lg:px-20'>
+		<div>
 			{/* header */}
-			<div className='flex items-center sticky top-0 bg-white py-5'>
-				<div className='font-bold text-xl text-[#2A4768]'>AI Solutions</div>
-				<div className='ml-auto flex items-center gap-4 text-[#1E3149] text-sm font-medium'>
-					<a className='hover:opacity-50' href='#banner'>
-						Home
-					</a>
-					<a className='hover:opacity-50' href='#services'>
-						Services
-					</a>
-					<a className='hover:opacity-50' href='#events'>
-						Events
-					</a>
-					<a className='hover:opacity-50' href='#gallery'>
-						Gallery
-					</a>
-					<a className='hover:opacity-50' href='#contact-us'>
-						Contact us
-					</a>
+			<HeaderComponent />
+
+			{/* landing section */}
+			<div className='column items-center py-10' id='banner'>
+				<div className='column__left'>
+					<h1>Revolutionize Your Business</h1>
+					<h1>with AI-Powered Solutions</h1>
+					<p className='column__desc'>
+						Unlock the potential of artificial intelligence to streamline
+						operations, enhance decision-making, and drive growth. From
+						predictive analytics to custom automation, our cutting-edge AI
+						services are designed to transform the way you work
+					</p>
+					<p className='column__cta'>
+						Get Started Today – Schedule Your Free Consultation
+					</p>
+				</div>
+				<div className='column__right'>
+					<picture>
+						<Image src='/images/bot.png' alt='bot' width={550} height={550} />
+					</picture>
 				</div>
 			</div>
 
-			{/* banner */}
-			<Image
-				id='banner'
-				className='w-full mt-10'
-				src='/images/banner.jpg'
-				alt='banner'
-				width={1120}
-				height={644}
-				priority
-			/>
-
 			{/* services */}
-			<div id='services'>
-				<div className='font-bold text-xl text-center mt-20'>Services</div>
-				<div className='mt-3 text-center text-sm'>
-					Empowering businesses with innovative AI tools
+			<div className='py-10 vertical-gap-40' id='services'>
+				<h2>Our services</h2>
+				<div className='column'>
+					<div className='column__left'>
+						<picture>
+							<Image
+								src='/images/service-1.png'
+								alt='service 1'
+								width={550}
+								height={306}
+							/>
+						</picture>
+					</div>
+					<div className='column__right'>
+						<h3>Virtual assistance as a service</h3>
+						<p>
+							Boost productivity and streamline your business with our
+							professional Virtual Assistance services. From administrative
+							tasks and customer support to social media management and
+							specialized projects, our skilled VAs handle it all.
+						</p>
+						<p>
+							Enjoy flexible plans, cost-effective solutions, and 24/7 support
+							tailored to your needs. Focus on growing your business while we
+							handle the details.
+						</p>
+						<p className='column__cta'>Contact us to get started today!</p>
+					</div>
 				</div>
-				<div className='flex gap-5 mt-10 [&_*]:w-full text-center [&_p]:mt-4 [&_p]:text-sm'>
-					<div>
-						<Image
-							src='/images/service-1.jpg'
-							alt='service 1'
-							width={300}
-							height={300}
-							className=''
-						/>
-						<p>Fast thinking</p>
+				<div className='column'>
+					<div className='column__left'>
+						<picture>
+							<Image
+								src='/images/service-2.png'
+								alt='service 1'
+								width={550}
+								height={306}
+							/>
+						</picture>
 					</div>
-					<div>
-						<Image
-							src='/images/service-2.jpg'
-							alt='service 2'
-							width={300}
-							height={300}
-						/>
-						<p>Better decision making</p>
+					<div className='column__right'>
+						<h3>Prototyping as a Service</h3>
+						<p>
+							Turn your ideas into reality with our Prototyping as a Service.
+							Whether it’s a product, app, or design concept, we help you
+							visualize, test, and refine your vision quickly and efficiently.
+						</p>
+						<p>
+							Our expert team delivers high-quality prototypes tailored to your
+							specifications, ensuring faster development cycles and better
+							decision-making. From concept to execution, we’re here to bring
+							your innovation to life.
+						</p>
+						<p className='column__cta'>
+							Let’s build your vision—contact us today!
+						</p>
 					</div>
-					<div>
-						<Image
-							src='/images/service-3.jpg'
-							alt='service 3'
-							width={300}
-							height={300}
-						/>
-						<p>Better results</p>
+				</div>
+			</div>
+
+			{/* past events */}
+			<div className='py-10 vertical-gap-40' id='events'>
+				<div>
+					<h2>Past events</h2>
+					<p className='text-center text-sm mt-4'>
+						Uniting AI minds to explore advancements and applications.
+					</p>
+				</div>
+				<div className='column'>
+					<div className='column__left'>
+						<picture>
+							<Image
+								src='/images/past-event-1.png'
+								alt='service 1'
+								width={550}
+								height={306}
+							/>
+						</picture>
+					</div>
+					<div className='column__right'>
+						<h3>Discover a Thriving AI Community</h3>
+						<p>
+							Our past events and workshops have created a vibrant space for
+							innovation and connection. Bringing together AI enthusiasts,
+							researchers, and professionals, we’ve cultivated a community
+							passionate about exploring the transformative power of artificial
+							intelligence.
+						</p>
+					</div>
+				</div>
+				<div className='column column-reverse'>
+					<div className='column__left'>
+						<picture>
+							<Image
+								src='/images/past-event-2.png'
+								alt='service 1'
+								width={550}
+								height={306}
+							/>
+						</picture>
+					</div>
+					<div className='column__right'>
+						<h3>Explore Advanced AI Applications</h3>
+						<p>
+							For those ready to take their skills further, our Deep Learning
+							Applications sessions focus on real-world projects. From image
+							recognition to natural language processing, these workshops help
+							participants apply neural networks to solve practical challenges.
+						</p>
+					</div>
+				</div>
+				<div className='column'>
+					<div className='column__left'>
+						<picture>
+							<Image
+								src='/images/past-event-3.png'
+								alt='service 1'
+								width={550}
+								height={306}
+							/>
+						</picture>
+					</div>
+					<div className='column__right'>
+						<h3>Gain Insights from Industry Experts</h3>
+						<p>
+							Many of our workshops feature guest speakers and panels with
+							leading AI professionals. These sessions provide invaluable
+							insights into emerging technologies, industry trends, and the
+							future of artificial intelligence.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			{/* customer feedback */}
+			<div className='column py-10' id='feedback'>
+				<div className='column__left'>
+					<div className='flex flex-col items-center sticky top-28 -z-10'>
+						<p className='text-2xl font-bold'>Customers</p>
+						<p className='text-2xl font-bold text-white bg-black px-3 py-1 rounded-xl'>
+							Feedback
+						</p>
+					</div>
+				</div>
+				<div className='column__right vertical-gap-40'>
+					<div className='flex gap-4'>
+						<picture className='grow-0 shrink-0'>
+							<Image
+								src='/images/avatar-1.png'
+								alt='avatar 1'
+								style={{ width: 120, height: 120 }}
+								width={120}
+								height={120}
+							/>
+						</picture>
+						<div className='text-sm flex flex-col gap-2'>
+							<p>Blake Weston, Find Fill Storage</p>
+							<div className='flex items-center gap-1'>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										alt='avatar 1'
+										style={{ width: 18, height: 18 }}
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+							</div>
+							<p>
+								I’m a solo entrepreneur and not very good with tech. AI
+								solutions made it easy, mentoring me through everything. Highly
+								recommend!
+							</p>
+						</div>
+					</div>
+					<div className='flex gap-4'>
+						<picture className='grow-0 shrink-0'>
+							<Image
+								src='/images/avatar-2.png'
+								alt='avatar 1'
+								style={{ width: 120, height: 120 }}
+								width={120}
+								height={120}
+							/>
+						</picture>
+						<div className='text-sm flex flex-col gap-2'>
+							<p>Sarah Scaife, Product owner, BAXTA</p>
+							<div className='flex items-center gap-1'>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										alt='avatar 1'
+										style={{ width: 18, height: 18 }}
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+							</div>
+							<p>
+								We’re extremely impressed with AI solutions technical skill, and
+								ability to adapt, iterate, and learn new skills.
+							</p>
+						</div>
+					</div>
+					<div className='flex gap-4'>
+						<picture className='grow-0 shrink-0'>
+							<Image
+								src='/images/avatar-3.png'
+								alt='avatar 1'
+								style={{ width: 120, height: 120 }}
+								width={120}
+								height={120}
+							/>
+						</picture>
+						<div className='text-sm flex flex-col gap-2'>
+							<p>Mike Fields, Director, Care Careers</p>
+							<div className='flex items-center gap-1'>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										alt='avatar 1'
+										style={{ width: 18, height: 18 }}
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+							</div>
+							<p>
+								Exceptional AI services that streamlined our processes and
+								delivered impressive results!
+							</p>
+						</div>
+					</div>
+					<div className='flex gap-4'>
+						<picture className='grow-0 shrink-0'>
+							<Image
+								src='/images/avatar-4.png'
+								alt='avatar 1'
+								style={{ width: 120, height: 120 }}
+								width={120}
+								height={120}
+							/>
+						</picture>
+						<div className='text-sm flex flex-col gap-2'>
+							<p>John doe, Developer, Cargo</p>
+							<div className='flex items-center gap-1'>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										alt='avatar 1'
+										style={{ width: 18, height: 18 }}
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+								<picture>
+									<Image
+										src='/images/star.svg'
+										style={{ width: 18, height: 18 }}
+										alt='avatar 1'
+										width={18}
+										height={18}
+									/>
+								</picture>
+							</div>
+							<p>
+								The AI services were innovative and effective, significantly
+								improving our workflows and delivering great results.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 
 			{/* upcoming events */}
-			<div id='events'>
-				<p className='text-xl text-center mt-20 font-bold'>Upcoming events</p>
-				<div className='mt-10 flex items-center [&_div]:w-full [&_div]:flex [&_div]:flex-col [&_div]:items-center [&_div]:gap-2 [&_p]:text-sm [&_p+p]:text-xs'>
-					<div>
-						<Image
-							src='/images/event-1.png'
-							alt='upcoming 1'
-							width={100}
-							height={100}
-						/>
-						<p>Design submit</p>
-						<p>Jan 15, 2022</p>
-					</div>
-					<div>
-						<Image
-							src='/images/event-2.png'
-							alt='upcoming 1'
-							width={100}
-							height={100}
-						/>
-						<p>Design submit</p>
-						<p>Jan 15, 2022</p>
-					</div>
-					<div>
-						<Image
-							src='/images/event-3.png'
-							alt='upcoming 1'
-							width={100}
-							height={100}
-						/>
-						<p>Design submit</p>
-						<p>Jan 15, 2022</p>
-					</div>
-				</div>
-			</div>
-
-			{/* gallery */}
-			<div id='gallery'>
-				<p className='text-xl text-center mt-20 font-bold'>Gallery</p>
-				<Image
-					src='/images/gallery-1.png'
-					alt='gallery 1'
-					width={1280}
-					height={526}
-					className='w-full h-auto mt-10'
-				/>
-				<Image
-					src='/images/gallery-2.png'
-					alt='gallery 2'
-					width={1280}
-					height={526}
-					className='w-full h-auto mt-4'
-				/>
-			</div>
-
-			{/* customer feedback */}
-			<div id='feedback'>
-				<p className='text-xl text-center mt-20 font-bold'>Customer feedback</p>
-				<div className='mt-10 flex flex-col items-center gap-3'>
+			<div className='py-10 flex flex-col items-center vertical-gap-40'>
+				<h2>Upcoming events</h2>
+				<picture>
 					<Image
-						src='/images/avatar.png'
-						alt='avatar'
-						width={100}
-						height={100}
+						src='/images/event-1.png'
+						width={700}
+						height={349}
+						alt='event 1'
 					/>
-					<p className='font-semibold text-sm'>
-						Blake Weston, Find Fill Storage
-					</p>
-					<div className='flex items-center gap-5'>
-						<Image src='/images/star.svg' alt='star' width={32} height={32} />
-						<Image src='/images/star.svg' alt='star' width={32} height={32} />
-						<Image src='/images/star.svg' alt='star' width={32} height={32} />
-						<Image src='/images/star.svg' alt='star' width={32} height={32} />
-						<Image src='/images/star.svg' alt='star' width={32} height={32} />
-					</div>
-					<p className='max-w-[516px] text-center'>
-						AI solutions do high-quality work in the allotted timeframe. They
-						maintain clear and consistent communication, providing updates on
-						key project components and listening to feedback. There are numerous
-						different stages, processes, and statuses in our project which made
-						the work very complicated, but AI solutions worked it all out.
-					</p>
-				</div>
+				</picture>
+				<picture>
+					<Image
+						src='/images/event-2.png'
+						width={700}
+						height={349}
+						alt='event 1'
+					/>
+				</picture>
 			</div>
 
-			{/* contact us */}
-			<div id='contact-us'>
-				<ContactUs />
-			</div>
-
-			<div className='mt-20 flex items-center justify-between'>
-				<p>© 2024 AI Solution. All Rights Reserved.</p>
-				<p>Privacy policy</p>
-				<p>Terms of use</p>
-			</div>
+			<FooterComponent />
 		</div>
 	)
 }

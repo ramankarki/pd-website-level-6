@@ -1,8 +1,10 @@
 'use client'
 
 import { ChangeEvent, FormEvent, useState } from 'react'
-import exitIcon from '../../public/images/exit.svg'
+import exitIcon from '../../../public/images/exit.svg'
 import Image from 'next/image'
+import HeaderComponent from '@/components/header'
+import FooterComponent from '@/components/footer'
 
 type Form = {
 	name: string
@@ -91,6 +93,8 @@ export default function ContactUs() {
 
 	return (
 		<section>
+			<HeaderComponent />
+
 			<div className=''>
 				<h2 className='font-bold text-xl text-center mt-20'>Contact me</h2>
 				<p className='text-center text-sm mt-4'>
@@ -99,86 +103,94 @@ export default function ContactUs() {
 			</div>
 
 			<form onSubmit={onSubmit}>
-				<label>
-					<p>Name</p>
-					<input
-						type='text'
-						name='name'
-						onChange={onInputChange}
-						value={form.name}
-						required
-					/>
-				</label>
-				<label>
-					<p>Email</p>
-					<input
-						type='email'
-						name='email'
-						onChange={onInputChange}
-						value={form.email}
-						required
-					/>
-				</label>
-				<label>
-					<p>Phone</p>
-					<input
-						type='text'
-						name='phone'
-						onChange={onInputChange}
-						value={form.phone}
-						required
-					/>
-				</label>
-				<label>
-					<p>Company name</p>
-					<input
-						type='text'
-						name='companyName'
-						onChange={onInputChange}
-						value={form.companyName}
-						required
-					/>
-				</label>
-				<label>
-					<p>Job title</p>
-					<input
-						type='text'
-						name='jobTitle'
-						onChange={onInputChange}
-						value={form.jobTitle}
-						required
-					/>
-				</label>
-				<label>
-					<p>Job details</p>
-					<input
-						type='text'
-						name='jobDetails'
-						onChange={onInputChange}
-						value={form.jobDetails}
-						required
-					/>
-				</label>
-				<label>
-					<p>Country</p>
-					<input
-						type='text'
-						name='country'
-						onChange={onInputChange}
-						value={form.country}
-						required
-					/>
-				</label>
-				<label>
-					<p>Subject</p>
-					<input
-						type='text'
-						name='subject'
-						onChange={onInputChange}
-						value={form.subject}
-						required
-					/>
-				</label>
+				<div className='flex gap-5'>
+					<label>
+						<p>Name</p>
+						<input
+							type='text'
+							name='name'
+							onChange={onInputChange}
+							value={form.name}
+							required
+						/>
+					</label>
+					<label>
+						<p>Email</p>
+						<input
+							type='email'
+							name='email'
+							onChange={onInputChange}
+							value={form.email}
+							required
+						/>
+					</label>
+				</div>
+				<div className='flex gap-5'>
+					<label>
+						<p>Subject</p>
+						<input
+							type='text'
+							name='subject'
+							onChange={onInputChange}
+							value={form.subject}
+							required
+						/>
+					</label>
+					<label>
+						<p>Phone</p>
+						<input
+							type='text'
+							name='phone'
+							onChange={onInputChange}
+							value={form.phone}
+							required
+						/>
+					</label>
+				</div>
+				<div className='flex gap-5'>
+					<label>
+						<p>Company</p>
+						<input
+							type='text'
+							name='companyName'
+							onChange={onInputChange}
+							value={form.companyName}
+							required
+						/>
+					</label>
+					<label>
+						<p>Job title</p>
+						<input
+							type='text'
+							name='jobTitle'
+							onChange={onInputChange}
+							value={form.jobTitle}
+							required
+						/>
+					</label>
+				</div>
+				<div className='flex gap-5'>
+					<label>
+						<p>Job details</p>
+						<input
+							type='text'
+							name='jobDetails'
+							onChange={onInputChange}
+							value={form.jobDetails}
+							required
+						/>
+					</label>
+					<label>
+						<p>Country</p>
+						<input
+							type='text'
+							name='country'
+							onChange={onInputChange}
+							value={form.country}
+							required
+						/>
+					</label>
+				</div>
 				<label>
 					<p>Message</p>
 					<textarea
@@ -223,6 +235,8 @@ export default function ContactUs() {
 					/>
 				</p>
 			) : null}
+
+			<FooterComponent />
 		</section>
 	)
 }

@@ -30,7 +30,7 @@ textarea {
 }
 
 form {
-	max-width: 600px;
+	max-width: 620px;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -40,6 +40,7 @@ form {
 
 form label {
 	font-size: 14px;
+	width: 100%;
 }
 
 label p {
@@ -73,4 +74,76 @@ label p {
 
 .form-failed {
 	background-color: rgb(228, 103, 103);
+}
+
+.column {
+	display: flex;
+	gap: 20px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.column-reverse {
+	flex-direction: row-reverse;
+}
+
+.column__left,
+.column__right {
+	flex: 1 1 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.column img {
+	width: 100%;
+}
+
+.column h1 {
+	font-size: 32px;
+	font-weight: 900;
+}
+
+.column h3 {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.column__cta {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.vertical-gap-40 {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+article {
+	max-width: 800px;
+	margin: auto;
+}
+
+article h1 {
+	font-size: 32px;
+	font-weight: 700;
+	margin: 32px 0;
+}
+
+article h2 {
+	font-size: 24px;
+	font-weight: 700;
+	text-align: left;
+	margin: 32px 0;
+}
+
+article p {
+	margin: 24px 0;
 }
